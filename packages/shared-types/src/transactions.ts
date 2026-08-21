@@ -36,17 +36,3 @@ export interface Spend {
 }
 
 export type SpendResponse = ApiResponse<Spend>;
-
-// Spend Error Handling 422 Unprocessable Entity
-
-export interface SpendError {
-  field: string;
-  message: string
-}
-
-export interface SpendError422 {
-
-}
-
-
-
