@@ -1,18 +1,4 @@
-import { SurvivalStatus } from './enums';
-
-export interface PaginationMeta {
-  page: number;
-  limit: number;
-  total_items: number;
-  total_pages: number;
-}
-
-export interface ApiResponse<T> {
-  success: boolean;
-  message: string;
-  data: T;
-  pagination?: PaginationMeta;
-}
+import { ApiResponse, SurvivalStatus } from './index';
 
 export interface SummaryDashboard {
   alert_threshold: number;
