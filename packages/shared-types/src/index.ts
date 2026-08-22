@@ -6,3 +6,4 @@ export * from './log';
 export * from './config';
 export * from './user';
 export * from './report';
+export * from './categories'
