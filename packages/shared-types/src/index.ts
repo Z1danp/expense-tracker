@@ -7,3 +7,4 @@ export * from './config';
 export * from './user';
 export * from './report';
 export * from './categories'
+export * from './accounts'

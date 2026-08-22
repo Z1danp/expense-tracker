@@ -36,6 +36,7 @@ export interface Account {
   type: PaymentMethod;
   balance: number;
   is_active: boolean;
+  created_at: string;
 }
 
 export interface Preference {
