@@ -4,3 +4,5 @@ export * from './dashboard';
 export * from './transactions';
 export * from './log';
 export * from './config';
+export * from './user';
+export * from './report';
