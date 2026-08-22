@@ -13,7 +13,7 @@ export interface SpendingTrend {
   trend_direction: 'up' | 'down';
 }
 
-export interface CategoryBreakdown {
+export interface CategoryCompare {
   category_id: string;
   category_name: string;
   current_amount: number;
@@ -41,7 +41,7 @@ export interface Highlights {
 export interface Report {
     period: Period;
     spending_trend: SpendingTrend;
-    category_breakdown: CategoryBreakdown[];
+    category_breakdown: CategoryCompare[];
     highlights: Highlights;
 }
 
