@@ -14,7 +14,7 @@ export interface CyclePreview {
   days_until_reset: number;
 }
 
-export interface Preference {
+export interface Preferences {
   id: string;
   name: string;
   email: string;
@@ -23,4 +23,4 @@ export interface Preference {
   cycle_preview: CyclePreview;
 }
 
-export type PreferenceResponse = ApiResponse<Preference>;
+export type PreferenceResponse = ApiResponse<Preferences>;
