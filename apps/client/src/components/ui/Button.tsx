@@ -10,6 +10,8 @@ interface ButtonProps {
   onClick: () => void;
 }
 
+// components
+
 const Button = ({ label, isDisabled, className, icon, onClick }: ButtonProps) => {
   return (
     <button
