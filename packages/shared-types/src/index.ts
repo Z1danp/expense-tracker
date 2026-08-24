@@ -9,3 +9,4 @@ export * from './report';
 export * from './categories';
 export * from './accounts';
 export * from './preferences';
+export * from './auth'
