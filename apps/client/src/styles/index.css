@@ -1,22 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    /* font */
-    --font-bebas: 'Bebas Neue', sans-serif;
-    --font-barlow: 'Barlow Semi Condensed', sans-serif;
+@theme {
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-barlow: 'Barlow Semi Condensed', sans-serif;
 
-    /* color token */
-    --color-black: #0D0D0D;
-    --color-red: #D92323;
-    --color-dark-maroon: #732424;
-    --color-gray: #7B7B7B;
-    --color-white: #FFFFFF;
-    --color-acid-yellow: #FFE500;
-    --color-charcoal-gray: #222222;
-    --color-light-gray: #CCCCCC;
-  }
-
+  --color-black: #0D0D0D;
+  --color-red: #D92323;
+  --color-dark-maroon: #732424;
+  --color-gray: #7B7B7B;
+  --color-white: #FFFFFF;
+  --color-acid-yellow: #FFE500;
+  --color-charcoal-gray: #222222;
+  --color-light-gray: #CCCCCC;
 }
