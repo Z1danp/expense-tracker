@@ -3,6 +3,7 @@ import SpendingSummaryCard from '../components/SpendingSummaryCard';
 import SpendingByCategory from '../components/SpendingByCategory';
 import RecentTransactions from '../components/RecentTransactions';
 import BottomStatsCards from '../components/BottomStatsCards';
+import DummyBottomNav from '../components/DummyBottomNav';
 
 // Mock data — replace with real data from API/state
 const MOCK_CATEGORIES = [
@@ -42,6 +43,8 @@ export default function Dashboard() {
       <RecentTransactions transactions={MOCK_TRANSACTIONS} />
 
       <BottomStatsCards changePercent={9.5} deadlineDays={9} />
+
+      <DummyBottomNav />
     </div>
   );
 }
