@@ -23,7 +23,7 @@ const MOCK_TRANSACTIONS = [
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-black pb-24 flex flex-col gap-5">
+    <div className="min-h-screen bg-charcoal-gray pb-24 flex flex-col gap-5">
       <DashboardHeader userName="Zidan" />
 
       <SpendingSummaryCard

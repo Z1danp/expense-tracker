@@ -23,42 +23,47 @@ export default function SpendingSummaryCard({
   };
 
   return (
-    <div className="mx-4 bg-gradient-to-br from-red to-dark-maroon border-2 border-white p-5">
+    <div className="mx-4 bg-red border-2 border-white p-5">
       {/* Title row */}
-      <div className="flex items-center justify-between mb-2">
-        <span className="font-barlow text-white/80 text-sm font-semibold uppercase tracking-wide">
-          Total Spending This Month
-        </span>
-        <span className="bg-white text-red font-bebas text-lg px-3 py-0.5 leading-tight">
+      <div className="flex items-center justify-between mb-3 ">
+        <div className="flex flex-col gap-1">
+          <p className="font-barlow text-white text-xl">
+            Total Spending This Month
+          </p>
+          {/* Big number */}
+          <p className="font-barlow uppercase font-bold text-white text-4xl leading-none ">
+            {formatAmount(totalSpending)}
+          </p>
+        </div>
+        <span className="bg-white text-red font-barlow font-bold text-5xl px-3 py-0.5 h-15">
           {currency}
         </span>
       </div>
 
-      {/* Big number */}
-      <p className="font-bebas text-white text-5xl leading-none mb-4">
-        {formatAmount(totalSpending)}
-      </p>
-
       {/* Budget & remaining */}
-      <div className="flex justify-between font-barlow text-xs text-white/80 mb-1.5">
-        <span>Budgets: {currency} {formatAmount(budget)}</span>
+      <div className="flex justify-between font-barlow text-base text-white mb-1.5">
+        <span>
+          Budgets: {formatAmount(budget)}
+        </span>
         <span>Remaining: {formatAmount(remaining)}</span>
       </div>
 
       {/* Progress bar */}
-      <div className="w-full h-3 bg-charcoal-gray/50 border border-white/30 overflow-hidden">
+      <div className="w-full h-4 flex items-center bg-red border border-white overflow-hidden">
         <div
-          className={`h-full transition-all duration-500 ${isHighUsage ? 'bg-acid-yellow' : 'bg-white'}`}
+          className={`h-[80%] m-[1.5px] transition-all duration-500 ${isHighUsage ? 'bg-acid-yellow' : 'bg-white'}`}
           style={{ width: `${usagePercent}%` }}
         />
       </div>
 
       {/* Alert & deadline */}
-      <div className="flex justify-between font-barlow text-xs mt-2">
-        <span className={`font-bold ${isHighUsage ? 'text-acid-yellow' : 'text-white/80'}`}>
+      <div className="flex justify-between font-barlow text-sm mt-2">
+        <span
+          className={`font-bold ${isHighUsage ? 'text-acid-yellow' : 'text-white/80'}`}
+        >
           {usagePercent.toFixed(1)}% ALERT
         </span>
-        <span className="text-white/80 uppercase">
+        <span className="text-white font-bebas">
           Deadline: {deadline} Days
         </span>
       </div>
