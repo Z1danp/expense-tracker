@@ -13,11 +13,12 @@ interface RecentTransactionsProps {
 
 const CATEGORY_COLORS: Record<string, string> = {
   Bill: 'bg-red text-white',
-  Coffee: 'bg-amber-600 text-white',
-  Hobbies: 'bg-emerald-600 text-white',
-  Food: 'bg-orange-500 text-white',
-  Transport: 'bg-blue-600 text-white',
-  Shopping: 'bg-purple-600 text-white',
+  Coffee: 'bg-red text-white',
+  Hobbies: 'bg-red text-white',
+  Food: 'bg-red text-white',
+  Transport: 'bg-red text-white',
+  Shopping: 'bg-red text-white',
+  
 };
 
 export default function RecentTransactions({ transactions }: RecentTransactionsProps) {
@@ -28,30 +29,30 @@ export default function RecentTransactions({ transactions }: RecentTransactionsP
   };
 
   return (
-    <div className="mx-4 bg-gradient-to-br from-dark-maroon to-red/80 border-2 border-white/20 p-5">
-      <h2 className="font-bebas text-white text-xl mb-4">Recent Transactions</h2>
+    <div className="mx-4 bg-dark-maroon border-2 border-white/20 p-5">
+      <h2 className="font-barlow font-bold text-white text-xl mb-4">Recent Transactions</h2>
 
       <div className="flex flex-col gap-3">
         {transactions.map((tx) => (
           <div
             key={tx.id}
-            className="flex items-center justify-between bg-charcoal-gray/30 px-3 py-2.5 border border-white/10"
+            className="flex items-center justify-between bg-acid-yellow px-3 py-2.5 border border-white/10"
           >
             <div className="flex items-center gap-2.5 min-w-0">
-              <span className="font-barlow text-white font-semibold text-sm truncate uppercase">
+              <span className="font-bebas text-black text-lg truncate uppercase">
                 {tx.name}
               </span>
               <span
-                className={`font-barlow text-[10px] font-bold px-2 py-0.5 rounded-sm flex-shrink-0 uppercase ${CATEGORY_COLORS[tx.category] ?? 'bg-gray text-white'}`}
+                className={`font-barlow text-sm font-bold px-1  flex-shrink-0 ${CATEGORY_COLORS[tx.category] ?? 'bg-gray text-white'}`}
               >
                 {tx.category}
               </span>
-              <span className="font-barlow text-white/50 text-xs flex-shrink-0">
+              <span className="font-barlow text-dark-maroon font-bold text-sm flex-shrink-0">
                 {tx.date}
               </span>
             </div>
 
-            <span className="font-bebas text-acid-yellow text-base flex-shrink-0 ml-2">
+            <span className="font-barlow font-bold text-red text-lg flex-shrink-0 ml-2">
               {formatAmount(tx.amount, tx.currency)}
             </span>
           </div>
