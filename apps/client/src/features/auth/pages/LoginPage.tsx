@@ -18,7 +18,7 @@ const Login: FC = () => {
         </h1>
         <form
           onSubmit={handleSubmit}
-          className="bg-dark-maroon border-1 border-white p-6 w-full flex flex-col gap-2"
+          className="bg-dark-maroon border border-white p-6 w-full flex flex-col gap-2"
         >
           <span className="bg-acid-yellow text-black font-bebas text-xl px-2 py-0.5 self-start mb-2">
             Login
@@ -30,7 +30,7 @@ const Login: FC = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full font-barlow p-2 text-base border-2 bg-white border-black outline-none"
+            className="w-full font-barlow p-2 text-base border-3 bg-white border-black outline-none"
           />
           <label className="text-white font-barlow font-bold text-base mt-2">
             Password
@@ -39,18 +39,18 @@ const Login: FC = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full font-barlow p-2 text-base border-2 bg-white border-black outline-none"
+            className="w-full font-barlow p-2 text-base border-3 bg-white border-black outline-none"
           />
           <button
             type="submit"
-            className="mt-4 p-1 bg-red text-white font-barlow font-bold text-lg border-2 border-white cursor-pointer w-full hover:opacity-90 transition-opacity"
+            className="mt-4 p-1 bg-red text-white font-barlow font-bold text-xl border-3 border-white cursor-pointer w-full hover:bg-white hover:text-red hover:border-red transition-opacity"
           >
-            Sign in
+            Sign In
           </button>
         </form>
         <p className="text-white font-barlow font-bold mt-5 text-base">
           Don't have an account yet?{' '}
-          <span className="text-white  font-bold border-2 border-acid-yellow bg-red px-1.5 py-0.5 cursor-pointer">
+          <span className="text-white  font-bold border-3 border-acid-yellow hover:bg-white hover:text-red hover:border-acid-yellow bg-red px-1.5 py-0.5 cursor-pointer">
             Sign Up
           </span>
         </p>

@@ -1,9 +1,9 @@
 import './styles/App.css';
-import Login from './features/auth/pages/LoginPage';
+import Register from './features/auth/pages/RegisterPage';
 
 function App() {
   return (
-    <Login />
+    <Register />
   );
 }
 
