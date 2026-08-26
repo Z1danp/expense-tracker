@@ -1,20 +1,20 @@
 import type { SVGProps } from "react";
 
-const SVGComponent = (props:SVGProps<SVGSVGElement>) => (
+const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={40}
+    width={32}
     xmlns="http://www.w3.org/2000/svg"
-    height={40}
-    id="screenshot-3791623e-ace8-5507-aa8e-4ae6c4042bba"
-    viewBox="0 0 40 40"
+    height={32}
+    id="screenshot-f4801a4b-bb0a-54d2-bc8f-761140cbde4e"
+    viewBox="0 0 32 32"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     fill="none"
     {...props}
   >
-    <g id="shape-3791623e-ace8-5507-aa8e-4ae6c4042bba">
+    <g id="shape-f4801a4b-bb0a-54d2-bc8f-761140cbde4e">
       <defs>
         <clipPath
-          id="frame-clip-3791623e-ace8-5507-aa8e-4ae6c4042bba-render-9"
+          id="frame-clip-f4801a4b-bb0a-54d2-bc8f-761140cbde4e-render-1"
           className="frame-clip frame-clip-def"
         >
           <rect
@@ -22,8 +22,8 @@ const SVGComponent = (props:SVGProps<SVGSVGElement>) => (
             ry={0}
             x={0}
             y={0}
-            width={40}
-            height={40}
+            width={32}
+            height={32}
             transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
           />
         </clipPath>
@@ -32,16 +32,16 @@ const SVGComponent = (props:SVGProps<SVGSVGElement>) => (
         <g className="frame-container-blur">
           <g className="frame-container-shadows">
             <g
-              clipPath="url(#frame-clip-3791623e-ace8-5507-aa8e-4ae6c4042bba-render-9)"
+              clipPath="url(#frame-clip-f4801a4b-bb0a-54d2-bc8f-761140cbde4e-render-1)"
               fill="none"
             >
               <g
                 className="fills"
-                id="fills-3791623e-ace8-5507-aa8e-4ae6c4042bba"
+                id="fills-f4801a4b-bb0a-54d2-bc8f-761140cbde4e"
               >
                 <rect
-                  width={40}
-                  height={40}
+                  width={32}
+                  height={32}
                   className="frame-background"
                   x={0}
                   transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
@@ -56,17 +56,17 @@ const SVGComponent = (props:SVGProps<SVGSVGElement>) => (
               </g>
               <g className="frame-children">
                 <g
-                  id="shape-fae489e3-58b4-5359-ba61-87f6493dc278"
+                  id="shape-83bbb1ae-5a87-57c9-967a-ee2b7f449e2f"
                   style={{
                     opacity: 1,
                   }}
                 >
                   <g
                     className="fills"
-                    id="fills-fae489e3-58b4-5359-ba61-87f6493dc278"
+                    id="fills-83bbb1ae-5a87-57c9-967a-ee2b7f449e2f"
                   >
                     <path
-                      d="M6.6666717529296875,24.16668701171875L11.666671752929688,21.66668701171875L11.666671752929688,35L6.6666717529296875,35L6.6666717529296875,24.16668701171875Z"
+                      d="M2.6666641235351562,12L9.333328247070312,18.6666259765625L14.666664123535156,13.33331298828125L22.666664123535156,24L17.333328247070312,24L18.666664123535156,26.6666259765625L28,26.6666259765625L28,17.33331298828125L25.333328247070312,16L25.333328247070312,21.33331298828125L16,10.6666259765625L10.666664123535156,16L4,9.33331298828125L2.6666641235351562,12Z"
                       fillRule="nonzero"
                       style={{
                         fill: "currentColor",
@@ -76,17 +76,17 @@ const SVGComponent = (props:SVGProps<SVGSVGElement>) => (
                   </g>
                 </g>
                 <g
-                  id="shape-77d9b0a8-2a6d-5757-8289-d48b8f9cb6ed"
+                  id="shape-37b57afe-1376-5160-af75-e504399e8adf"
                   style={{
                     opacity: 1,
                   }}
                 >
                   <g
                     className="fills"
-                    id="fills-77d9b0a8-2a6d-5757-8289-d48b8f9cb6ed"
+                    id="fills-37b57afe-1376-5160-af75-e504399e8adf"
                   >
                     <path
-                      d="M15,17.5L20,15L20,35L15,35L15,17.5Z"
+                      d="M4,5.3333740234375L28,5.3333740234375L25.333335876464844,2.66668701171875L6.666664123535156,2.66668701171875L4,5.3333740234375Z"
                       fillRule="nonzero"
                       style={{
                         fill: "currentColor",
@@ -96,37 +96,17 @@ const SVGComponent = (props:SVGProps<SVGSVGElement>) => (
                   </g>
                 </g>
                 <g
-                  id="shape-fee48bdc-56db-53aa-a7bd-0a388703f4ea"
+                  id="shape-197a16b7-776a-5658-83d2-0c5ed9fe3f95"
                   style={{
                     opacity: 1,
                   }}
                 >
                   <g
                     className="fills"
-                    id="fills-fee48bdc-56db-53aa-a7bd-0a388703f4ea"
+                    id="fills-197a16b7-776a-5658-83d2-0c5ed9fe3f95"
                   >
                     <path
-                      d="M23.333328247070312,10.83331298828125L28.333328247070312,8.33331298828125L28.333328247070312,35L23.333328247070312,35L23.333328247070312,10.83331298828125Z"
-                      fillRule="nonzero"
-                      style={{
-                        fill: "currentColor",
-                        fillOpacity: 1,
-                      }}
-                    />
-                  </g>
-                </g>
-                <g
-                  id="shape-568b8bb1-c417-56af-a03e-b3cee3c10577"
-                  style={{
-                    opacity: 1,
-                  }}
-                >
-                  <g
-                    className="fills"
-                    id="fills-568b8bb1-c417-56af-a03e-b3cee3c10577"
-                  >
-                    <path
-                      d="M0.99566650390625,21.666748046875L9.329010009765625,13.3333740234375L16.829010009765625,17.50006103515625L25.519485473632812,7.857177734375L22.662338256835938,6.666748046875L32.66233825683594,5.00006103515625L30.519485473632812,12.857177734375L25.99566650390625,10.00006103515625L16.829010009765625,21.666748046875L9.329010009765625,17.50006103515625L0.99566650390625,21.666748046875Z"
+                      d="M16,6.66668701171875L18.666671752929688,8.66668701171875L16,10.66668701171875L13.333335876464844,8.66668701171875L16,6.66668701171875Z"
                       fillRule="nonzero"
                       style={{
                         fill: "currentColor",

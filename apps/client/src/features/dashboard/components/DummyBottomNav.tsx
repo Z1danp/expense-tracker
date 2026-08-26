@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import realityIcon from '../../../assets/reality.svg';
-import actionIcon from '../../../assets/action.svg';
-import reportIcon from '../../../assets/report.svg';
-import lookIcon from '../../../assets/look.svg';
-import configIcon from '../../../assets/config.svg';
+import realityIcon from '../../../assets/reality.tsx';
+import actionIcon from '../../../assets/actions.tsx';
+import reportIcon from '../../../assets/report.tsx';
+import lookIcon from '../../../assets/look.tsx';
+import configIcon from '../../../assets/config.tsx';
 
 const NAV_ITEMS = [
   { id: 'reality', label: 'REALITY', icon: realityIcon },
@@ -17,27 +17,21 @@ export default function DummyBottomNav() {
   const [activeTab, setActiveTab] = useState('reality');
 
   return (
-    <nav className="fixed bottom-0 left-0 bg-dark-maroon border-t-2 border-white flex h-20 w-full ">
+    <nav className="fixed bottom-0 left-0 bg-dark-maroon border-t-2 border-white flex h-20 w-full">
       {NAV_ITEMS.map((item) => {
         const isActive = activeTab === item.id;
-
         return (
           <button
             key={item.id}
             onClick={() => setActiveTab(item.id)}
-            className={`flex flex-1 flex-col items-center justify-center transition-colors duration-200 cursor-pointer border-none ${isActive ? 'bg-acid-yellow text-red' : 'text-white hover:bg-charcoal-gray/20'}`}
+            className="flex flex-1 items-center justify-center cursor-pointer border-none bg-transparent  "
           >
             <div
-              className="w-7 h-7 mb-1 bg-current"
-              style={{
-                WebkitMask: `url(${item.icon}) no-repeat center`,
-                WebkitMaskSize: `contain`,
-                mask: `url(${item.icon}) no-repeat center`,
-                maskSize: `contain`,
-              }}
-            />
-
-            <span className="font-bebas text-xs">{item.label}</span>
+              className={`flex flex-col items-center justify-center w-13 py-1 transition-colors duration-200 ${isActive ? 'bg-acid-yellow text-red' : 'text-white hover:bg-charcoal-gray/20'}`}
+            >
+              <item.icon className={isActive ? 'text-red' : 'text-white'} />
+              <span className="font-bebas text-xs">{item.label}</span>
+            </div>
           </button>
         );
       })}

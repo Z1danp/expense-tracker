@@ -22,11 +22,11 @@ export default function SpendingByCategory({
   };
 
   return (
-    <div className="mx-4 bg-charcoal-gray border-2 border-white/20 p-5">
+    <div className="mx-4 bg-dark-maroon border-2 border-white p-5">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
-        <h2 className="font-bebas text-white text-xl">Spending by Categories</h2>
-        <span className="bg-white text-black font-bebas text-sm px-3 py-0.5 leading-tight uppercase">
+        <h2 className="font-barlow font-bold text-white text-xl">Spending by Categories</h2>
+        <span className="bg-acid-yellow text-black font-bebas text-sm px-3 py-0.5 leading-tight uppercase">
           {month} {year}
         </span>
       </div>

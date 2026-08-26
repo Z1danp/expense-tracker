@@ -2,19 +2,19 @@ import type { SVGProps } from 'react';
 
 const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={40}
+    width={35}
     xmlns="http://www.w3.org/2000/svg"
-    height={40}
-    id="screenshot-815c5052-738b-5e36-b8a5-299909740630"
-    viewBox="0 0 40 40"
+    height={35}
+    id="screenshot-4cdb871c-571d-5323-a9d2-6f6044f52e96"
+    viewBox="0 0 35 35"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     fill="none"
     {...props}
   >
-    <g id="shape-815c5052-738b-5e36-b8a5-299909740630">
+    <g id="shape-4cdb871c-571d-5323-a9d2-6f6044f52e96">
       <defs>
         <clipPath
-          id="frame-clip-815c5052-738b-5e36-b8a5-299909740630-render-5"
+          id="frame-clip-4cdb871c-571d-5323-a9d2-6f6044f52e96-render-1"
           className="frame-clip frame-clip-def"
         >
           <rect
@@ -22,8 +22,8 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
             ry={0}
             x={0}
             y={0}
-            width={40}
-            height={40}
+            width={35}
+            height={35}
             transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
           />
         </clipPath>
@@ -32,21 +32,21 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
         <g className="frame-container-blur">
           <g className="frame-container-shadows">
             <g
-              clipPath="url(#frame-clip-815c5052-738b-5e36-b8a5-299909740630-render-5)"
+              clipPath="url(#frame-clip-4cdb871c-571d-5323-a9d2-6f6044f52e96-render-1)"
               fill="none"
             >
               <g
                 className="fills"
-                id="fills-815c5052-738b-5e36-b8a5-299909740630"
+                id="fills-4cdb871c-571d-5323-a9d2-6f6044f52e96"
               >
                 <rect
-                  width={40}
-                  height={40}
+                  width={35}
+                  height={35}
                   className="frame-background"
                   x={0}
                   transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
                   style={{
-                    fill: 'rgb(255, 255, 255)',
+                    fill: 'currentColor',
                     fillOpacity: 0,
                   }}
                   ry={0}
@@ -56,17 +56,17 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
               </g>
               <g className="frame-children">
                 <g
-                  id="shape-4372721d-5977-5899-843f-20d2b9dc3143"
+                  id="shape-4557ab79-b78b-5a99-b06f-bb2961962f5e"
                   style={{
                     opacity: 1,
                   }}
                 >
                   <g
                     className="fills"
-                    id="fills-4372721d-5977-5899-843f-20d2b9dc3143"
+                    id="fills-4557ab79-b78b-5a99-b06f-bb2961962f5e"
                   >
                     <path
-                      d="M24.166671752929688,2.5L9.166671752929688,20L19.166671752929688,20L13.333343505859375,37.5L30.833343505859375,15.83331298828125L20.833343505859375,15.83331298828125L24.166671752929688,2.5Z"
+                      d="M2.9166641235351562,20.41668701171875L10.208328247070312,13.125L16.041664123535156,18.95831298828125L24.791664123535156,7.29168701171875L18.958328247070312,7.29168701171875L20.416664123535156,4.375L30.625,4.375L30.625,14.58331298828125L27.708328247070312,16.04168701171875L27.708328247070312,10.20831298828125L17.5,21.875L11.666664123535156,16.04168701171875L4.375,23.33331298828125L2.9166641235351562,20.41668701171875Z"
                       fillRule="nonzero"
                       style={{
                         fill: 'currentColor',
@@ -76,17 +76,17 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
                   </g>
                 </g>
                 <g
-                  id="shape-62a86c15-a1d4-5df2-8c51-7b7432e41971"
+                  id="shape-31b2db04-8307-5839-ab5c-bd364f70b3e3"
                   style={{
                     opacity: 1,
                   }}
                 >
                   <g
                     className="fills"
-                    id="fills-62a86c15-a1d4-5df2-8c51-7b7432e41971"
+                    id="fills-31b2db04-8307-5839-ab5c-bd364f70b3e3"
                   >
                     <path
-                      d="M28.333328247070312,5.8333740234375L35,4.16668701171875L32.5,7.5L25.833328247070312,9.16668701171875L28.333328247070312,5.8333740234375Z"
+                      d="M4.375,27.70831298828125L30.625,27.70831298828125L27.708335876464844,30.625L7.291664123535156,30.625L4.375,27.70831298828125Z"
                       fillRule="nonzero"
                       style={{
                         fill: 'currentColor',
@@ -96,17 +96,17 @@ const SVGComponent = (props: SVGProps<SVGSVGElement>) => (
                   </g>
                 </g>
                 <g
-                  id="shape-2f1a69bf-8c5a-5b07-8798-46140bfd8316"
+                  id="shape-dc3d48f2-8055-5a67-adf8-ffb83f013c43"
                   style={{
                     opacity: 1,
                   }}
                 >
                   <g
                     className="fills"
-                    id="fills-2f1a69bf-8c5a-5b07-8798-46140bfd8316"
+                    id="fills-dc3d48f2-8055-5a67-adf8-ffb83f013c43"
                   >
                     <path
-                      d="M5.8333282470703125,30.8333740234375L4.166664123535156,34.16668701171875L10.833328247070312,32.5L12.5,29.16668701171875L5.8333282470703125,30.8333740234375Z"
+                      d="M17.5,23.33331298828125L20.416671752929688,25.52081298828125L17.5,27.70831298828125L14.583335876464844,25.52081298828125L17.5,23.33331298828125Z"
                       fillRule="nonzero"
                       style={{
                         fill: 'currentColor',

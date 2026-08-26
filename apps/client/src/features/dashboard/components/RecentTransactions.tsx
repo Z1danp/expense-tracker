@@ -29,7 +29,7 @@ export default function RecentTransactions({ transactions }: RecentTransactionsP
   };
 
   return (
-    <div className="mx-4 bg-dark-maroon border-2 border-white/20 p-5">
+    <div className="mx-4 bg-dark-maroon border-2 border-white p-5">
       <h2 className="font-barlow font-bold text-white text-xl mb-4">Recent Transactions</h2>
 
       <div className="flex flex-col gap-3">
