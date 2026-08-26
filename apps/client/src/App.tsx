@@ -1,9 +1,9 @@
 import './styles/App.css';
-import Dashboard from './features/dashboard/pages/Dashboard';
+import Actions from './features/actions/pages/Actions';
 
 function App() {
   return (
-    <Dashboard />
+    <Actions />
   );
 }
 
