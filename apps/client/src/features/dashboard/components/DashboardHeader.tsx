@@ -21,7 +21,7 @@ export default function DashboardHeader({
       </div>
 
       <button
-        className="w-14 h-14 bg-red border-3 border-white hover:border-red flex items-center justify-center flex-shrink-0 cursor-pointer hover:bg-white hover:text-red transition-colors group"
+        className="w-14 h-14 bg-red border-3 border-white hover:border-red flex items-center justify-center shrink-0 cursor-pointer hover:bg-white hover:text-red group"
         aria-label="Add expense"
       >
         <AddIcon className="h-12 w-12 text-white hover:text-red" />
