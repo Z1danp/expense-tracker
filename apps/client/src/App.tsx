@@ -1,10 +1,8 @@
 import './styles/App.css';
-import Actions from './features/actions/pages/Actions';
+import Config from './features/config/pages/Config';
 
 function App() {
-  return (
-    <Actions />
-  );
+  return <Config />;
 }
 
 export default App;
