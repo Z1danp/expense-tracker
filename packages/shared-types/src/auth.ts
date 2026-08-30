@@ -11,14 +11,13 @@ export interface AuthUser {
   id: string;
   name: string;
   email: string;
-  payday_date: string;
+  payday_date: number;
   alert_threshold: number;
   created_at: string;
 }
 
 export interface LoginData {
   user: AuthUser;
-  token: string;
 }
 
 export type LoginResponse = ApiResponse<LoginData>;
