@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { sql } from 'drizzle-orm';
 import { db } from './db/index.js';
 import authRoutes from './features/auth/auth.routes.js';
+import cookieParser from 'cookie-parser'
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ app.use(
     credentials: true,
   })
 );
+app.use(cookieParser());
 app.use(express.json());
 
 // set auth route
