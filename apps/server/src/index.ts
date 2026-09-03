@@ -3,15 +3,25 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { sql } from 'drizzle-orm';
 import { db } from './db/index.js';
+import authRoutes from './features/auth/auth.routes.js';
+import cookieParser from 'cookie-parser'
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:5173',
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 app.use(express.json());
 
+// set auth route
+app.use('/api/v1/auth', authRoutes);
 // health check endpoint
 
 app.get('/health', async (_req, res) => {
@@ -33,5 +43,5 @@ app.get('/health', async (_req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server listening color your night on http://localhost:${PORT}`)
-})
+  console.log(`Server listening color your night on http://localhost:${PORT}`);
+});
