@@ -3,7 +3,6 @@ import ActionTabs from '../components/ActionTabs';
 import SpendForm from '../components/SpendForm';
 import LootForm from '../components/LootForm';
 import ShiftForm from '../components/ShiftForm';
-import DummyBottomNav from '../../dashboard/components/DummyBottomNav';
 import type { ActionTab } from '../components/ActionTabs';
 
 export default function Actions() {
@@ -16,8 +15,6 @@ export default function Actions() {
       {activeTab === 'spend' && <SpendForm />}
       {activeTab === 'loot' && <LootForm />}
       {activeTab === 'shift' && <ShiftForm />}
-
-      <DummyBottomNav />
     </div>
   );
 }
