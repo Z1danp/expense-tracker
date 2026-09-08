@@ -1,6 +1,6 @@
 -- ENUMS
-CREATE TYPE category_type AS ENUM ('expense', 'income');
-CREATE TYPE account_type AS ENUM ('tunai', 'bank', 'e-wallet');
+-- CREATE TYPE category_type AS ENUM ('expense', 'income');
+-- CREATE TYPE account_type AS ENUM ('tunai', 'bank', 'e-wallet');
 
 -- 1. Tambahan kolom preferensi pada USERS
 CREATE TABLE users (
@@ -29,7 +29,7 @@ CREATE TABLE categories (
     id                  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id             UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     name                VARCHAR(255) NOT NULL,
-    type                transaction_type NOT NULL,
+    type                category_type NOT NULL,
     limit_amount        BIGINT NULL CHECK ((type = 'income' AND limit_amount IS NULL) OR (type = 'expense' AND limit_amount > 0)),
     is_active           BOOLEAN NOT NULL DEFAULT true,
     created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),

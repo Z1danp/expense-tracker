@@ -30,10 +30,7 @@ export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
 
 // categories entity
-export const categoryTypeEnum = pgEnum('category_type', [
-  'expense',
-  'income',
-]);
+export const categoryTypeEnum = pgEnum('category_type', ['expense', 'income']);
 export const categories = pgTable(
   'categories',
   {
@@ -62,3 +59,37 @@ export const categories = pgTable(
   ]
 );
 
+export type Category = typeof categories.$inferSelect;
+export type NewCategory = typeof categories.$inferInsert;
+
+// accounts entity
+
+export const accountTypeEnum = pgEnum(`account_type`, [
+  'tunai',
+  'bank',
+  'e-wallet',
+]);
+
+export const accounts = pgTable(
+  `accounts`,
+  {
+    id: uuid(`id`).primaryKey().defaultRandom(),
+    user_id: uuid(`user_id`)
+      .notNull()
+      .references(() => users.id, { onDelete: 'cascade' }),
+    name: varchar(`name`, { length: 255 }).notNull(),
+    balance: bigint(`balance`, { mode: 'number' }).notNull().default(0),
+    type: accountTypeEnum(`type`).notNull(),
+    is_active: boolean('is_active').notNull().default(true),
+    created_at: timestamp('created_at', { withTimezone: true })
+      .notNull()
+      .defaultNow(),
+  },
+  (table) => [
+    // ⚡ Index untuk mempercepat query akun berdasarkan user_id
+    index('idx_accounts_user_id').on(table.user_id),
+  ]
+);
+
+export type Account = typeof accounts.$inferSelect;
+export type NewAccount = typeof accounts.$inferInsert;
