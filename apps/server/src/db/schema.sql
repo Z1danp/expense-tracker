@@ -1,3 +1,7 @@
+-- ENUMS
+CREATE TYPE category_type AS ENUM ('expense', 'income');
+CREATE TYPE account_type AS ENUM ('tunai', 'bank', 'e-wallet');
+
 -- 1. Tambahan kolom preferensi pada USERS
 CREATE TABLE users (
     id                  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -15,7 +19,7 @@ CREATE TABLE accounts (
     user_id             UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     name                VARCHAR(255) NOT NULL,
     balance             BIGINT NOT NULL DEFAULT 0,
-    type                VARCHAR(20) NOT NULL CHECK(type IN ('tunai', 'bank', 'e-wallet')),
+    type                account_type NOT NULL,
     is_active           BOOLEAN NOT NULL DEFAULT true,
     created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -25,32 +29,15 @@ CREATE TABLE categories (
     id                  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id             UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     name                VARCHAR(255) NOT NULL,
-    type                VARCHAR(20) NOT NULL CHECK(type IN ('expense', 'income')),
+    type                transaction_type NOT NULL,
+    limit_amount        BIGINT NULL CHECK ((type = 'income' AND limit_amount IS NULL) OR (type = 'expense' AND limit_amount > 0)),
     is_active           BOOLEAN NOT NULL DEFAULT true,
     created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    CONSTRAINT uq_categories_id_type UNIQUE (id, type)
+
+    CONSTRAINT uq_categories_user_name UNIQUE (user_id, name)
 );
 
--- 4. BUDGETS (Disesuaikan untuk awal siklus gajian)
-CREATE TABLE budgets (
-    id                  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id             UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-    category_id         UUID NOT NULL,
-    category_type       VARCHAR(20) NOT NULL DEFAULT 'expense' CHECK (category_type = 'expense'),
-    limit_amount        BIGINT NOT NULL,
-    cycle_start_date    DATE NOT NULL,
-    created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-
-    CONSTRAINT fk_budgets_category_expense
-        FOREIGN KEY (category_id, category_type)
-        REFERENCES categories(id, type)
-        ON DELETE CASCADE,
-    
-    CONSTRAINT uq_user_category_cycle
-        UNIQUE(user_id, category_id, cycle_start_date)
-);
-
--- 5. TRANSACTIONS (Mendukung Spend, Loot, dan Shift)
+-- 4. TRANSACTIONS (Mendukung Spend, Loot, dan Shift)
 CREATE TABLE transactions (
     id                  UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id             UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
@@ -84,4 +71,3 @@ CREATE INDEX idx_accounts_user_id ON accounts(user_id);
 CREATE INDEX idx_categories_user_id ON categories(user_id);
 CREATE INDEX idx_transactions_user_date ON transactions(user_id, date DESC);
 CREATE INDEX idx_transactions_user_type ON transactions(user_id, type);
-CREATE INDEX idx_budgets_user_cycle ON budgets(user_id, cycle_start_date);

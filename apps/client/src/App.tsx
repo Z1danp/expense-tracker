@@ -1,8 +1,11 @@
 import './styles/App.css';
-import Config from './features/config/pages/Config';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
 
 function App() {
-  return <Config />;
+  return (
+    <RouterProvider router={router} />
+  )
 }
 
 export default App;

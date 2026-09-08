@@ -3,7 +3,6 @@ import CycleProtocol from '../components/CycleProtocol';
 import BudgetMatrix from '../components/BudgetMatrix';
 import AccountsRegistry from '../components/AccountsRegistry';
 import Preferences from '../components/Preferences';
-import DummyBottomNav from '../../dashboard/components/DummyBottomNav';
 
 const MOCK_CATEGORIES = [
   { id: '1', name: 'FOOD & DRINK', limit: 1_000_000 },
@@ -34,8 +33,6 @@ export default function Config() {
       <BudgetMatrix totalBudget={2_500_000} categories={MOCK_CATEGORIES} />
       <AccountsRegistry accounts={MOCK_ACCOUNTS} />
       <Preferences />
-
-      <DummyBottomNav />
     </div>
   );
 }
