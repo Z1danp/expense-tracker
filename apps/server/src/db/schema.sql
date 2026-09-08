@@ -1,5 +1,5 @@
 -- ENUMS
-CREATE TYPE transaction_type AS ENUM ('expense', 'income', 'transfer');
+CREATE TYPE category_type AS ENUM ('expense', 'income');
 CREATE TYPE account_type AS ENUM ('tunai', 'bank', 'e-wallet');
 
 -- 1. Tambahan kolom preferensi pada USERS
