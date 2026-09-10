@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import { sql } from 'drizzle-orm';
 import { db } from './db/index.js';
 import authRoutes from './features/auth/auth.routes.js';
+import accountRoutes from './features/accounts/accounts.routes.js';
 import cookieParser from 'cookie-parser'
 
 dotenv.config();
@@ -20,8 +21,9 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
-// set auth route
+// Routes
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/accounts', accountRoutes);
 // health check endpoint
 
 app.get('/health', async (_req, res) => {
